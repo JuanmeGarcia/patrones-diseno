@@ -9,3 +9,12 @@
  *
  * https://refactoring.guru/es/design-patterns/singleton
  */
+
+import { configManager } from "./singleton/config-manager.ts";
+
+
+configManager.setConfig('apiUrl', 'http://localhost:3000/users')
+
+const apiUrl = configManager.getConfig('apiUrl')
+
+console.log({ apiUrl });
